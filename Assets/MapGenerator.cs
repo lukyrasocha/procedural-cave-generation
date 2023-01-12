@@ -30,7 +30,7 @@ public class MapGenerator : MonoBehaviour {
 		RandomFillMap();
 
 		for (int i = 0; i < 5; i ++) {
-			SmoothMap();
+			CellularAutomata();
 		}
 	}
 
@@ -54,7 +54,7 @@ public class MapGenerator : MonoBehaviour {
 		}
 	}
 
-	void SmoothMap() {
+	void CellularAutomata() {
 		for (int x = 0; x < width; x ++) {
 			for (int y = 0; y < height; y ++) {
 				int neighbourWallTiles = GetSurroundingWallCount(x,y);
